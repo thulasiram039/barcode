@@ -1,4 +1,6 @@
-import Image from "next/image";
+// import Image from "next/image";
+
+import BarcodeGeneratorPage from "./barcode-generator/page";
 
 export default function Home() {
   return (
@@ -98,7 +100,7 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer> */}
-      
+      <BarcodeGeneratorPage />
     </div>
   );
 }
