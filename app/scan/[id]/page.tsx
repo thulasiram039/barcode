@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import { products } from "../../data/products";
-
+import Image from "next/image";
 export default function ScanPage() {
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
@@ -18,6 +18,13 @@ export default function ScanPage() {
             <button className="border px-4 py-2 rounded hover:bg-gray-200">
               {variant}
             </button>
+            <Image 
+                src={product.image} 
+                alt={product.name} 
+                width={200} 
+                height={200} 
+                className="mt-2"
+            />
           </li>
         ))}
       </ul>
