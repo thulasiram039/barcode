@@ -14,13 +14,13 @@ export default function ScanPage() {
       <h2 className="text-lg font-semibold mb-2">Select a Variant:</h2>
       <ul className="space-y-2">
         {product.variants.map((variant) => (
-          <li key={variant}>
+          <li key={variant.name}>
             <button className="border px-4 py-2 rounded hover:bg-gray-200">
-              {variant}
+              {variant.name}
             </button>
             <Image 
-                src={product.image} 
-                alt={product.name} 
+                src={variant.image} 
+                alt={variant.name} 
                 width={200} 
                 height={200} 
                 className="mt-2"
