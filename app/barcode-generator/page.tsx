@@ -43,7 +43,9 @@ export default function BarcodeGeneratorPage() {
       </button>
 </div>
       {showBarcode && barcodeData && (
-        <Barcode value={barcodeData} format="CODE128" width={2} height={100} />
+        <Barcode value={barcodeData} format="CODE128" 
+        className="w-[500px] h-[80px]"
+        />
       )}
     </div>
   );
