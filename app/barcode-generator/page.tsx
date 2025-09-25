@@ -44,7 +44,7 @@ export default function BarcodeGeneratorPage() {
 </div>
       {showBarcode && barcodeData && (
         <Barcode value={barcodeData} format="CODE128" 
-        className="w-[500px] h-[80px]"
+        className="w-[450px] h-[100px]"
         />
       )}
     </div>
