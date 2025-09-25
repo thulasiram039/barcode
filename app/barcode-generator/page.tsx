@@ -46,7 +46,7 @@ export default function BarcodeGeneratorPage() {
         <Barcode
           value={barcodeData}
           format="CODE128"
-          width={3}         // Set desired bar width (in px)
+          width={2}         // Set desired bar width (in px)
           height={120}      // Set desired barcode height (in px)
         />
       )}
