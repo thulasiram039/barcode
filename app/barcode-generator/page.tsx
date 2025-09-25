@@ -18,7 +18,7 @@ export default function BarcodeGeneratorPage() {
   const barcodeData = origin ? `${origin}/scan/${productId}` : "";
 
   return (
-    <div className="p-4 flex flex-col items-center mt-96 bg-amber-500">
+    <div className="p-4 flex flex-col items-center mt-96">
       <h1 className="text-2xl font-bold mb-4">Generate Barcode for Product</h1>
 <div className="flex gap-4 items-center">
       <select
@@ -43,8 +43,11 @@ export default function BarcodeGeneratorPage() {
       </button>
 </div>
       {showBarcode && barcodeData && (
-        <Barcode value={barcodeData} format="CODE128" 
-        className="w-[450px] h-[100px]"
+        <Barcode
+          value={barcodeData}
+          format="CODE128"
+          width={3}         // Set desired bar width (in px)
+          height={120}      // Set desired barcode height (in px)
         />
       )}
     </div>
